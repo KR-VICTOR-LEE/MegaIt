@@ -1,0 +1,14 @@
+package com.lec.test;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		
+		String name;
+		String phone;
+		String address;
+		String birthday;
+
+	}
+
+}

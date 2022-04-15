@@ -1,0 +1,122 @@
+package com.lec.ex3_quiz;
+
+import java.awt.*;
+import java.awt.event.ActionListener;
+import java.io.*;
+import javax.swing.*;
+import java.util.ArrayList;
+
+import com.lec.ex2_swing.Ex03_GUI;
+
+public class MyFrame extends JFrame implements ActionListener {
+	
+		private Container contenPane; 
+		private JPanel jp, jp2; 
+		private JTextField txtName, txtTel, txtage;
+		private ImageIcon icon, icon2;
+		private JButton btnIn, btnOut;
+		private JTextArea jta;
+		private JScrollPane scroolbar;
+		private int cnt; 
+		
+		
+	
+		
+		public MyFrame(String title) {
+			super(title);
+			setDefaultCloseOperation(EXIT_ON_CLOSE); 
+			contenPane = getContentPane();
+			jp = new JPanel(new GridLayout(3,2));
+			jp2 = new JPanel(new GridLayout(3,2));
+			txtName = new JTextField();
+			txtTel = new JTextField();
+			txtage = new JTextField();
+			icon = new ImageIcon("icon/output.png");
+			icon2 = new ImageIcon("icon/join.png");
+			btnOut = new JButton("출력", icon);
+			jta = new JTextArea(5,30);
+			scroolbar = new JScrollPane(jta);
+			jp.add(new JLabel("이   름 ", (int)CENTER_ALIGNMENT));
+			jp.add(txtName);
+			jp.add(new JLabel("전   화 ", (int)CENTER_ALIGNMENT));
+			jp.add(txtTel);
+			jp.add(new JLabel("나   이 ", (int)CENTER_ALIGNMENT));
+			jp.add(txtage);
+			
+			contenPane.add(jp, BorderLayout.NORTH);
+			contenPane.add(jp2, BorderLayout.NORTH);
+			contenPane.add(btnIn, BorderLayout.WEST);
+			contenPane.add(btnOut, BorderLayout.CENTER);
+			contenPane.add(scroolbar, BorderLayout.SOUTH);
+			
+			setVisible(true);
+			setSize(new Dimension(400,300));
+			setLocation(200,100);
+			//setBounds(,,,,);
+			
+			
+			// 이벤트 추가
+			
+			btnIn.addActionListener(this);
+			btnOut.addActionListener(this);
+			
+		}
+		
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			if(e.getSource() == btnIn) {
+				ArrayList<Person>persons=new ArrayList<Person>();
+				OutputStream out = null;
+				
+				out = FileOutputStream("src/com/lec/ex_quiz");
+				
+			}
+			
+			
+			
+			
+			
+			
+			
+			//----------------------------------------------------
+			if(e.getSource() == btnOut) {
+				// txtName, txtTel , txtage 에 입력된 값을 jta에 출력
+				String name = txtName.getText().trim();
+				String tel = txtTel.getText().trim();
+				if(name.equals("") || tel.equals("")) {
+					System.out.println("이름과 전화번호는 필수 입력 사항입니다.");
+					return;
+				}
+				if(tel.indexOf("-")==tel.lastIndexOf("-") ||
+						tel.indexOf("-")<2||
+						tel.lastIndexOf("-")>10) {
+					System.out.println("전화번호 형식을 확인해 주세요.");
+					return;
+				}
+				// 나이체크
+				int age=0;
+				try {
+					age  =  Integer.parseInt(txtage.getText());
+					if(age < 0 || age>150) {
+						System.out.println("유효하지 않는 나이를 입력할 경우 0살로");
+						age = 0;
+					}
+				} catch (Exception e2) {
+					System.out.println("유효하지 않는 나이를 입력하셨습니다.");
+				}
+				System.out.println(++cnt + "명 입력됨");
+				if(cnt == 1) {
+					jta.setText("이름\t전화\t\t나이\n");
+				}
+				jta.append(name + "\t"+tel+"\t\t"+age+"\n");
+				txtName.setText("");
+				txtTel.setText("");
+				txtage.setText("");
+			
+			}
+		}
+		public static void main(String[] args) {
+			new Ex03_GUI("");
+		}
+}

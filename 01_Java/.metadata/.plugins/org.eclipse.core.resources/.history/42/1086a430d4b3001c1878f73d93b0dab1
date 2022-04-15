@@ -1,0 +1,10 @@
+package com.lec.ex_list;
+
+public class Ex02_linkedList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

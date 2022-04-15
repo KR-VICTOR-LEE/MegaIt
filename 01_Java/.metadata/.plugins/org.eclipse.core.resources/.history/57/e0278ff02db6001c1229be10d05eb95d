@@ -1,0 +1,29 @@
+package com.lec.test;
+
+public class Friend {
+	private String name;
+	private String phone; 
+	private String address;
+	private String birthday;
+	
+	
+	public Friend(String string, int i) {}
+	
+	@Override
+	public String toString() {
+		return "捞抚 :"+ name + "\n"+"锅龋 : "+ phone + "林家 : "+ address + "积老 :" + birthday;
+	}
+
+
+
+	public Friend(String name, String address, String phone,  String birthday) {
+		this.name = name;
+		this.phone = phone;
+		this.address = address;
+		this.birthday = birthday;
+	}
+	
+	
+	
+
+}

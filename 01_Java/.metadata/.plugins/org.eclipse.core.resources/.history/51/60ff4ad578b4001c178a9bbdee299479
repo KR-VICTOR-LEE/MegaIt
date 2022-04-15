@@ -1,0 +1,45 @@
+package com.lec.test;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class TestMain1 {
+
+	public static void main(String[] args) {
+
+		String name;
+		int number;
+		String address;
+		int i = 0;
+		ArrayList<String> list = new ArrayList<String>();
+
+		do {
+			
+				
+			
+			Scanner sc = new Scanner(System.in);
+			System.out.println("정보입력 (Y/N)");
+			if (! sc.next().equalsIgnoreCase("y")) {
+				
+			
+			i = sc.nextInt();
+			
+				System.out.println("이름 : ");
+				name = sc.next();
+				System.out.println("번호 : ");
+				number = sc.nextInt();
+				System.out.println("주소 : ");
+				address=sc.next();
+				list.add(new Member(name, address, number));
+				System.out.println("입력");
+				break;
+				for(String mb : list) {
+					System.out.println(list.get(i));
+				}
+			}	
+			
+		} while (true);
+
+	}
+
+}

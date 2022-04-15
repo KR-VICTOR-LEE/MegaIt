@@ -1,0 +1,21 @@
+package ex01_inputstreamoutputstream;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+// (1) 스트림객체 (입력용, 출력용) (2)읽고 쓴다 (3) 파일닫는다(스트림객체.close)
+public class Ex05_filecopyStep1 {
+	public static void main(String[] args) {
+		InputStream is = null;
+		OutputStream os = null;
+		try {
+			is = new FileInputStream("d:\\webPro\\kk.PNG");
+			os = new FileOutputStream("d:\\webPro\\kk.PNG");
+		} catch (FileNotFoundException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+}

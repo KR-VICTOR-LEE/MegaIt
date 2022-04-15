@@ -1,0 +1,10 @@
+package com.lec.ex05homework;
+
+public class MemberTestMain_outputStream {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

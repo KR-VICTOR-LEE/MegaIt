@@ -1,0 +1,11 @@
+package com.lec.ex5_atm;
+
+public class ATM_Target implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

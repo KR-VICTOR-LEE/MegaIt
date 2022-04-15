@@ -1,0 +1,21 @@
+package com.lec.test;
+
+import java.util.Scanner;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		
+		Friend[] fiFriends = {("","","","")};
+		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		while(true) {
+			System.out.println();
+		}
+
+	}
+
+}

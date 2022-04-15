@@ -1,0 +1,17 @@
+package com.lec.ex4_threadNObjectN;
+
+public class ThreadEx extends Thread {
+	private int num = 0;
+
+	public ThreadEx(String name) {
+		super(name);
+	}
+
+	@Override
+	public void run() {
+		
+	public int getNum() {
+		return num;
+	}
+
+}

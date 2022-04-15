@@ -1,0 +1,12 @@
+package com.lec.ex2_thread;
+
+public class TargetExTestMain {
+
+	public static void main(String[] args) {
+		TargetEx01 target1 = new TargetEx01();
+		TargerEx02 target2 = new TargerEx02();
+		
+
+	}
+
+}

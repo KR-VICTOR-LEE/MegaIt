@@ -1,0 +1,17 @@
+package com.lec.ex1_awt;
+
+import java.awt.*;
+
+public class Ex03 extends Frame {
+	private Panel panel;
+	private TextField txtfield;
+	private Button btnOk, btnExit;
+	private List list;
+	
+	public Ex03() {}
+	
+	public Ex03(String title) {
+		this();
+		setTitle(title);
+	}
+}

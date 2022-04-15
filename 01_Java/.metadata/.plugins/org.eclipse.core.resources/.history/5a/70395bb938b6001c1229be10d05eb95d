@@ -1,0 +1,39 @@
+package com.lec.test2;
+
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class TestMain2 {
+
+	public static void main(String[] args) {
+		HashMap<String, Customer> customer = new HashMap<String, Customer>();
+		Scanner sc = new  Scanner(System.in);
+		Customer customer1 = new Customer();
+		String name, phone, address, answer;
+		OutputStream out = null;
+		
+		
+		while(true) {
+			System.out.println("회원가입 하시겠습니까? Y/N");
+			answer = sc.next();
+			if(answer.equalsIgnoreCase("n")) {
+				break;
+			}else if (answer.equalsIgnoreCase("y")) {
+				System.out.println("이름 : ");
+				name = sc.next();
+				System.out.println("전화번호 : ");
+				phone = sc.next();
+				System.out.println("주소 : ");
+				address = sc.next();
+				customer1.put(phone, name);
+				
+				continue;
+			}
+			
+		}
+		
+	}
+
+}

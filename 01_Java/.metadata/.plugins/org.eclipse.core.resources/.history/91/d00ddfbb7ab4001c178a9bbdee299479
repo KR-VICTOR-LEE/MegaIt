@@ -1,0 +1,35 @@
+package com.lec.test;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class TestMain1 {
+
+	public static void main(String[] args) {
+		ArrayList<Member> list = new ArrayList<Member>();
+
+		String name;
+		String number;
+		String address;
+		String i;
+		Member member = new Member();
+		Scanner sc = new Scanner(System.in);
+		while {
+			System.out.println("rr");
+			i=sc.next();
+			if (i.equalsIgnoreCase("n")) {
+				break;
+			}else if (i.equalsIgnoreCase("y")) {
+				System.out.println();
+				member.setName(sc.next());
+				System.out.println();
+				member.setNumber(sc.next());
+				System.out.println();
+				member.setAddress(sc.next());
+				list.add(member);
+			}
+		} 
+		sc.close();
+	}
+
+}

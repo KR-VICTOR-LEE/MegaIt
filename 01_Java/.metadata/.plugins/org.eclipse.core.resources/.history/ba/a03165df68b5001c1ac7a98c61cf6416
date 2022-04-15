@@ -1,0 +1,10 @@
+package com.lec.ex5_atm;
+
+public class ATMtestMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

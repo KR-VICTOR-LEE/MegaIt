@@ -1,0 +1,25 @@
+package com.lec.ex2_map;
+
+import java.util.Date;
+// Friend f = new Friend("이름", "번호");
+// sysout(f) -> 이름, 연락처, 생일 : date 
+public class Friend {
+	private String name;
+	private String tel;
+	private Date birth;
+	
+	
+	public Friend(String name, String tel) {
+		this.name = name;
+		this.tel = tel;
+	}
+
+
+	public Friend(String name, String tel, Date birth) {
+		super();
+		this.name = name;
+		this.tel = tel;
+		this.birth = birth;
+	}
+	
+}

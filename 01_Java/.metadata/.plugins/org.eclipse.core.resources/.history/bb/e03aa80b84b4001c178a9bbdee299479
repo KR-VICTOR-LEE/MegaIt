@@ -1,0 +1,10 @@
+package com.lec.test;
+
+import java.util.HashMap;
+
+public class TestMain2 {
+	public static void main(String[] args) {
+		HashMap<String, Member> map = new HashMap<String, Member>();
+	}
+
+}

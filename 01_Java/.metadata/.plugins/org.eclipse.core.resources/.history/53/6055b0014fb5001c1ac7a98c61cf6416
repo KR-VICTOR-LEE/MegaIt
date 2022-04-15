@@ -1,0 +1,10 @@
+package com.lec.ex2_thread;
+
+public class TargetExTestMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

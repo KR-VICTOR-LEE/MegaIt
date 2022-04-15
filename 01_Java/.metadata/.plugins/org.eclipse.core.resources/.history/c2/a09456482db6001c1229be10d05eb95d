@@ -1,0 +1,20 @@
+package com.lec.test;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		
+		String name;
+		String phone;
+		String address;
+		String birthday;
+		
+		Scanner sc = new Scanner(System.in);
+		ArrayList<Friend> = new ArrayList<Friend>();S
+
+	}
+
+}

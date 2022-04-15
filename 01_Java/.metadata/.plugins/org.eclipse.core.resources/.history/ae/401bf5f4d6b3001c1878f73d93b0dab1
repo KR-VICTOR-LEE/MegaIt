@@ -1,0 +1,13 @@
+package com.lec.ex2_map;
+
+import java.util.ArrayList;
+
+public class Ex01_HashMap {
+
+	public static void main(String[] args) {
+		ArrayList<String> list = new ArrayList<String>();
+		list.add("aaaa");
+
+	}
+
+}

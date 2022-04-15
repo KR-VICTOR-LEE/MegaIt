@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.lec.ex1_store&apos; to &apos;ch12_interface/src&apos;&#x0D;&#x0A;- Original project: &apos;ch11_abstractClass&apos;&#x0D;&#x0A;- Destination element: &apos;ch12_interface/src&apos;&#x0D;&#x0A;- Original element: &apos;ch11_abstractClass/src/com.lec.ex1_store&apos;" description="Copy package" destination="=ch12_interface/src" element1="/src&lt;com.lec.ex1_store" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1648004897583" version="1.0"/>
+</session>

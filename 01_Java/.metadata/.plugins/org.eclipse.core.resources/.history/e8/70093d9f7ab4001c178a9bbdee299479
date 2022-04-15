@@ -1,0 +1,18 @@
+package com.lec.test;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class TestMain1 {
+
+	public static void main(String[] args) {
+
+		String name;
+		String number;
+		String address;
+		String i;
+		ArrayList<String> list = new ArrayList<String>();
+		
+	}
+
+}

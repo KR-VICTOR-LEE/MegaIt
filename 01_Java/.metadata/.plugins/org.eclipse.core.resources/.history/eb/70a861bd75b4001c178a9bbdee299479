@@ -1,0 +1,34 @@
+package com.lec.test;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class TestMain1 {
+
+	public static void main(String[] args) {
+
+		String name;
+		int number;
+		String address;
+		int i = 0;
+		ArrayList<String> list = new ArrayList<String>();
+
+		do {
+			Scanner sc = new Scanner(System.in);
+			i = sc.nextInt();
+			switch (i) {
+			case 1:
+				System.out.println();
+				name = sc.next();
+				System.out.println();
+				number = sc.nextInt();
+				System.out.println();
+				address=sc.next();
+				break;
+				
+			}
+		} while (true);
+
+	}
+
+}

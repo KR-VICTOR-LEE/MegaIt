@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=ch12_interface/src&lt;com.lec.ex03_phone{IAcorporation.java[IAcorporation" modifiers="513" timestamp="1648011514222"/>
+<typeInfo handle="=ch12_interface/src&lt;com.lec.ex05_test{I3.java[I3" modifiers="513" timestamp="1648015162971"/>
+<typeInfo handle="=ch12_interface/src&lt;com.lec.ex07_book1{ILendable.java[ILendable" modifiers="513" timestamp="1648024795548"/>
+<typeInfo handle="=ch12_interface/src&lt;com.lec.ex10_aorb{I.java[I" modifiers="513" timestamp="1648096754649"/>
+<typeInfo handle="=ch12_interface/src&lt;com.lec.ex11_robot{Robot.java[Robot" modifiers="513" timestamp="1648097562497"/>
+<typeInfo handle="=ch13_pattern/src&lt;strategy1.step2{Robot.java[Robot" modifiers="1" timestamp="1648108049172"/>
+<typeInfo handle="=ch13_pattern/C:\/Program Files\/Java\/jre1.8.0_321\/lib\/rt.jar=/javadoc_location=/https:\/\/docs.oracle.com\/javase\/8\/docs\/api\/=/&lt;java.lang(Object.class[Object" modifiers="33" timestamp="1646882480489"/>
+<typeInfo handle="=ch13_pattern/C:\/Program Files\/Java\/jre1.8.0_321\/lib\/rt.jar=/javadoc_location=/https:\/\/docs.oracle.com\/javase\/8\/docs\/api\/=/&lt;java.awt.image(ImageProducer.class[ImageProducer" modifiers="1537" timestamp="1646882480489"/>
+<typeInfo handle="=ch13_pattern/src&lt;strategy1.step4.innterfaces{IMissile.java[IMissile" modifiers="513" timestamp="1648109868271"/>
+<typeInfo handle="=ch13_pattern/src&lt;strategy1.step4.innterfaces{IKnife.java[IKnife" modifiers="513" timestamp="1648110787191"/>
+<typeInfo handle="=ch13_pattern/src&lt;strategy1.step4.modularization{Robot.java[Robot" modifiers="1025" timestamp="1648111097807"/>
+<typeInfo handle="=ch13_pattern/src&lt;strategy1.step4.innterfaces{IFly.java[IFly" modifiers="513" timestamp="1648109805914"/>
+<typeInfo handle="=ch13_pattern/src&lt;strategy2.interfaces{IEngine.java[IEngine" modifiers="513" timestamp="1648174269680"/>
+<typeInfo handle="=ch13_pattern/src&lt;strategy2.interfaces{IKm.java[IKm" modifiers="513" timestamp="1648174269677"/>
+<typeInfo handle="=ch13_pattern/src&lt;strategy2.modularization{Car.java[Car" modifiers="1025" timestamp="1648176640464"/>
+<typeInfo handle="=ch13_pattern/src&lt;strategy2.interfaces{IFuel.java[IFuel" modifiers="513" timestamp="1648174269674"/>
+<typeInfo handle="=ch13_pattern/src&lt;strategy3.modularization{Person.java[Person" modifiers="1" timestamp="1648189093851"/>
+<typeInfo handle="=ch15_exception/src&lt;com.lec.ex5_lib{ILendable.java[ILendable" modifiers="513" timestamp="1649038289698"/>
+<typeInfo handle="=ch18_thread/C:\/Program Files\/Java\/jre1.8.0_321\/lib\/rt.jar=/javadoc_location=/https:\/\/docs.oracle.com\/javase\/8\/docs\/api\/=/&lt;java.lang(Thread.class[Thread" modifiers="33" timestamp="1646882480489"/>
+<typeInfo handle="=ch18_thread/C:\/Program Files\/Java\/jre1.8.0_321\/lib\/rt.jar=/javadoc_location=/https:\/\/docs.oracle.com\/javase\/8\/docs\/api\/=/&lt;java.lang(Runnable.class[Runnable" modifiers="1537" timestamp="1646882480489"/>
+<typeInfo handle="=ch19_gui/C:\/Program Files\/Java\/jre1.8.0_321\/lib\/rt.jar=/javadoc_location=/https:\/\/docs.oracle.com\/javase\/8\/docs\/api\/=/&lt;java.awt(Frame.class[Frame" modifiers="33" timestamp="1646882480489"/>
+<typeInfo handle="=ch19_gui/C:\/Program Files\/Java\/jre1.8.0_321\/lib\/rt.jar=/javadoc_location=/https:\/\/docs.oracle.com\/javase\/8\/docs\/api\/=/&lt;javax.swing(JFrame.class[JFrame" modifiers="33" timestamp="1646882480489"/>
+<typeInfo handle="=ch19_gui/C:\/Program Files\/Java\/jre1.8.0_321\/lib\/rt.jar=/javadoc_location=/https:\/\/docs.oracle.com\/javase\/8\/docs\/api\/=/&lt;java.awt.event(ActionListener.class[ActionListener" modifiers="1537" timestamp="1646882480489"/>
+</typeInfoHistroy>
