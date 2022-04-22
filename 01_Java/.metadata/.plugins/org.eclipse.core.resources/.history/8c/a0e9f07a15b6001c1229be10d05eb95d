@@ -1,7 +1,0 @@
-package com.lec.ex1_awt;
-
-import java.awt.Frame;
-
-public class Ex03 extends Frame {
-
-}

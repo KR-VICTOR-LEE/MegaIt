@@ -1,7 +1,0 @@
-package com.lec.ex2_swing;
-
-import javax.swing.JFrame;
-
-public class Ex01_Thrusday extends JFrame {
-
-}

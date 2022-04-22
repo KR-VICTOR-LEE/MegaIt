@@ -1,9 +1,0 @@
-package com.lec.ex2_map;
-
-import java.util.Date;
-
-public class Friend {
-	private String name;
-	private String tel;
-	private Datee birth;
-}
