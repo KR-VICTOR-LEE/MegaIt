@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>필드에 입력형식의 힌트를 주고 pattern체크하는 사용자 인터페이스</legend>
+            <!-- 정규표현식 : 정규표현식 연습장()을 통해 만들어진 정규표현식 test
+                [0-9] : 0~9 사이 한 글자 
+                [a-zA-Z] : 알파벳 중 한 문자
+                [가-힇ㄱ-ㅎㅏ-ㅣ] : 한글 중 한문자
+                {n} : n번 반복
+                {n,m} : 최소 n번, 최대 m번 반복(0<n<=m)
+                \d : 숫자 [0-9]와 동일
+                \w : 문자(숫자와 알파벳) 중 한문자
+                + : 1번 이상 반복
+                * : 0번 이상 반복
+                . : '\n' 을 제외한 임의의 한문자 자릿수
+                \. : .문자
+            -->
+            <ul>
+                <li>연락처
+                    <input type="text" name="tel" placeholder="000-0000-0000 / xx-xxxx-xxxx"
+                           pattern="\d{2,3}[a-z]{0,1}\d{3,4}[ .-]{0,1}\d{4}"
+                           title="전화번호 형식(010-0000-0000/xx-xxxx-xxxx)을 지켜주세요"
+                           required="required"/>
+                </li>
+                <li>카드
+                    <input type="text" name="cardno" 
+                           pattern="[0-9]{4}"/>
+                </li>
+                <li>이메일
+                    <input type="email" name="email" placeholder="메일형식을 지켜주세요"
+                           pattern="[a-zA-z0-9][a-zA-Z0-9_.]+@[a-zA-Z-0-9]\w+(\.[a-z]+){1,2}"/>
+                </li>
+            </ul>
+            <center><input type="submit" /></center>
+        </fieldset>
+    </form>
+</body>
+</html>

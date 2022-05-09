@@ -1,0 +1,98 @@
+-- DROP TABLE
+DROP TABLE STUDENT;
+DROP TABLE MAJOR;
+-- CREATE TABLE
+CREATE TABLE MAJOR(
+    mNO NUMBER(2),
+    mNAME VARCHAR2(50) NOT NULL,
+    PRIMARY KEY(mNO));
+CREATE TABLE STUDENT(
+    sNO VARCHAR2(7),
+    sNAME VARCHAR2(50) NOT NULL,
+    mNO NUMBER(2) NOT NULL,
+    SCORE NUMBER(3) DEFAULT 0,
+    sEXPEL NUMBER(1) DEFAULT 0,
+    PRIMARY KEY(sNO),
+    CHECK(SCORE>=0 AND SCORE<=100),
+    CHECK(sEXPEL=0 OR sEXPEL=1),
+    FOREIGN KEY(mNO) REFERENCES MAJOR(mNO));
+DROP SEQUENCE STUDENT_SEQ;
+CREATE SEQUENCE STUDENT_SEQ MAXVALUE 999 NOCACHE NOCYCLE;
+-- 더미 데이터 입력 : 학과정보
+INSERT INTO MAJOR VALUES (1, '컴퓨터공학');
+INSERT INTO MAJOR VALUES (2, '경영경제학');
+INSERT INTO MAJOR VALUES (3, '원예산업학');
+INSERT INTO MAJOR VALUES (4, '신문방송학');
+INSERT INTO MAJOR VALUES (5, '국어국문학');
+SELECT * FROM MAJOR;
+-- 학번 생성하기
+SELECT TO_CHAR(SYSDATE, 'YYYY')||TRIM(TO_CHAR(STUDENT_SEQ.NEXTVAL, '000')) FROM DUAL;
+SELECT TO_CHAR(SYSDATE, 'YYYY')||SUBSTR(TO_CHAR(STUDENT_SEQ.NEXTVAL, '000'), 2, 3) FROM DUAL;
+SELECT TO_CHAR(SYSDATE, 'YYYY')||LPAD(STUDENT_SEQ.NEXTVAL, 3, '0') FROM DUAL;
+
+SELECT EXTRACT(YEAR FROM SYSDATE)||TRIM(TO_CHAR(STUDENT_SEQ.NEXTVAL, '000')) FROM DUAL;
+SELECT EXTRACT(YEAR FROM SYSDATE)||SUBSTR(TO_CHAR(STUDENT_SEQ.NEXTVAL, '000'), 2, 3) FROM DUAL;
+SELECT EXTRACT(YEAR FROM SYSDATE)||LPAD(STUDENT_SEQ.NEXTVAL, 3, '0') FROM DUAL;
+
+DROP SEQUENCE STUDENT_SEQ;
+CREATE SEQUENCE STUDENT_SEQ MAXVALUE 999 NOCACHE NOCYCLE;
+
+-- 더미 데이터 : 학생 정보
+INSERT INTO STUDENT (SNO, SNAME, MNO, SCORE)
+    VALUES (EXTRACT(YEAR FROM SYSDATE)||LPAD(STUDENT_SEQ.NEXTVAL, 3, '0'), '홍길동',
+            (SELECT MNO FROM MAJOR WHERE MNAME='컴퓨터공학'), 100);
+INSERT INTO STUDENT (SNO, SNAME, MNO, SCORE)
+    VALUES (EXTRACT(YEAR FROM SYSDATE)||LPAD(STUDENT_SEQ.NEXTVAL, 3, '0'), '홍길동',
+            (SELECT MNO FROM MAJOR WHERE MNAME='컴퓨터공학'), 90);
+COMMIT;
+SELECT * FROM STUDENT;
+-- 프로그램 DAO에 들어갈 SQL문
+--0. 첫화면에 전공이름들 콤보박스에 추가(mName) : public Vector<String> getMNamelist()
+SELECT MNAME FROM MAJOR;
+--1. 학번검색 (sNo, sName, mName, score) : public StudentDto sNogetStudent(String sNo)
+SELECT SNO, SNAME, MNAME, SCORE
+    FROM STUDENT S, MAJOR M
+    WHERE S.MNO=M.MNO AND SNO='2022001';
+--2. 이름검색 (sNo, sName, mName, score) : public ArrayList<StudentDto> sNamegetStudent(String sName)
+SELECT SNO, SNAME, MNAME, SCORE
+    FROM STUDENT S, MAJOR M
+    WHERE S.MNO=M.MNO AND SNAME='홍길동';
+--3. 전공검색 (rank, sName(sNo포함), mName(mNo포함), score) 
+                    --: public ArrayList<StudentDto> mNamegetStudent(String mName)
+SELECT ROWNUM RANK, SNAME, MNAME, SCORE
+    FROM (SELECT SNAME||'('||SNO||')' SNAME, MNAME||'('||M.MNO||')' MNAME, SCORE
+                FROM STUDENT S, MAJOR M
+                WHERE S.MNO=M.MNO AND MNAME='컴퓨터공학'
+                ORDER BY SCORE DESC); -- DAO에 들어갈 SQL
+--4. 학생입력 : public int insertStudent(StudentDto dto)
+INSERT INTO STUDENT (SNO, SNAME, MNO, SCORE)
+    VALUES (EXTRACT(YEAR FROM SYSDATE)||LPAD(STUDENT_SEQ.NEXTVAL, 3, '0'), '신길동',
+            (SELECT MNO FROM MAJOR WHERE MNAME='경영경제학'), 99);
+COMMIT;
+SELECT * FROM STUDENT;
+--5. 학생수정 : public int updateStudent(StudentDto dto)
+UPDATE STUDENT SET SNAME='신수지',
+                   MNO=(SELECT MNO FROM MAJOR WHERE MNAME='원예산업학'),
+                   SCORE = 98
+            WHERE SNO=2022003;
+    -- 수정된 학생점수(SCORE)가 80이상이고, 제적자일 경우 제적해지를 추가하고자 할 때
+    UPDATE STUDENT SET SEXPEL = 0
+            WHERE SNO=2022003 AND SCORE>80;
+COMMIT;
+SELECT * FROM STUDENT;
+--6. 학생출력 (rank, sName(sNo포함), mName(mNo포함), score) : public ArrayList<StudentDto> getStudents()
+SELECT ROWNUM RANK, SNAME, MNAME, SCORE
+    FROM (SELECT SNAME||'('||SNO||')' SNAME, MNAME||'('||M.MNO||')' MNAME, SCORE
+                FROM STUDENT S, MAJOR M
+                WHERE S.MNO=M.MNO AND SEXPEL=0
+                ORDER BY SCORE DESC);
+--7. 제적자출력  (rank, sName(sNo포함), mName(mNo포함), score) 
+                    -- : public ArrayList<StudentDto> getStudentsExpel()
+SELECT ROWNUM RANK, SNAME, MNAME, SCORE
+    FROM (SELECT SNAME||'('||SNO||')' SNAME, MNAME||'('||M.MNO||')' MNAME, SCORE
+                FROM STUDENT S, MAJOR M
+                WHERE S.MNO=M.MNO AND SEXPEL=1
+                ORDER BY SCORE DESC);
+--8. 제적처리 : public int sNoExpel(String sNo)
+UPDATE STUDENT SET SEXPEL = 1 WHERE SNO=2022003;
+ROLLBACK;

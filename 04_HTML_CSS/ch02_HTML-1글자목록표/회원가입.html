@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        
+        table{border : 1px solid gray}
+        
+        tr{background-color:#ffffff}
+        
+        
+        td{
+            text-align : center;
+            padding : 5px;
+        }
+
+        .c {
+            text-align: left
+        }
+        d {
+            padding: 0px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <form action="#" method="get">
+        <table class="a">
+            <caption><h2>회원가입</h2></caption>
+            <tr>
+                <td>아이디</td>
+                <td>
+                    <input type="text" name="id"  />
+                </td>
+            <tr>    
+                <td>비밀번호</td>
+                <td>
+                    <input type="password" name="pw" />
+                </td>
+            </tr>
+            <tr>
+                <td>비밀번호확인</td>
+                <td>
+                    <input type="password" name="pwchc" />
+                </td>
+            </tr>
+            <tr>
+                <td>이  름</td>
+                <td>
+                    <input type="text" name="name" />
+                </td>
+            </tr>
+            <tr>
+                <td>전  화</td>
+                <td>
+                    <input type="tel" name="tel" />
+                </td>
+            </tr>
+            <tr>
+                <td>생년월일</td>
+                <td>
+                    <input type="date" name="birth" />
+                </td>
+            </tr>
+            <tr>
+                <td>성   별</td>
+                <td  colspan="2">
+                    <input type="radio" name="gender" value="m" checked="checked" /> 남
+                    <input type="radio" name="gender" value="w"  /> 여
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input class="sub" type="submit" name="submit" value="제출" />
+                    <hr class="d"/>
+                    <ul>
+                        <li>주민등록없이 전화번호로 회원가입</li>
+                        <li>대부분 서비가 이용 가능 합니다.<br /></li>
+                        (단. 일부 실명확인 후 이용 가능)
+                        <li class="c">정보변경은 추후 가능</li>
+                    </ul>
+                    
+                </td>
+            </tr>
+            
+        </table>
+    </form>
+</body>
+</html>

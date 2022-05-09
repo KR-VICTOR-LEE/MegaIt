@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style> /* url()용도 : 백그라운드 이미지 가져올 때, font 가져올 때 */
+        @font-face { /* 로컬폰드 설정 */
+            font-family: 'NanumPen';
+            src: url('NanumPenScript-Regular.ttf');
+        }
+        * {
+            font-family: 'NanumPen' 
+        }
+        #wrap{width:600px; 
+              margin:10px auto;
+              height:300px; 
+              border:1px solid gray;}
+            #wrap #content {
+                width: 80%;
+                height: 100%;
+                border: 1px solid red;
+                margin: 0 auto;
+                /*background-repeat: no-repeat;
+                       background-position : center right;*/
+                background: url('0504/sul.jpg') center right no-repeat;
+                background-size: 100%;
+                font-size : 2em;
+                color : red;
+                text-align:center;
+            }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">내일 쉼</div>
+    </div>
+</body>
+</html>

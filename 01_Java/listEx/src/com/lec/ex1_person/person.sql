@@ -50,4 +50,6 @@ SELECT ROWNUM RANK, A.*
             FROM PERSON P, JOB J
             WHERE P.JNO=J.JNO
             ORDER BY SUM DESC) A ;
+            
+SELECT * FROM PERSON;            
 
