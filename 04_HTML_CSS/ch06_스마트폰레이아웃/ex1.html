@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=yes,
+          maximum-scale-3.0, minimum-scale=0.7" />
+    <title></title>
+    <style>
+        /*****페이지 초기화*****/
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        /*****HEADER*****/
+        header {
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            background: url('imgEx1/bg_header.png');
+            position: relative;
+        }
+
+            header .left {
+                position: absolute;
+                left: 10px;
+                top: 7px;
+            }
+
+            header .right {
+                position: absolute;
+                right: 10px;
+                top: 7px;
+            }
+
+
+
+        #gnb ul {
+            overflow: hidden;
+            border: 5px solid gray;
+        }
+
+            #gnb ul li { /* li 메뉴가 8개가 있어야 li하나당 12.5% 사용 가능*/
+                float: left;
+                width: 10%;
+                margin: 1.25%;
+                border: 1px solid gray;
+                box-sizing: border-box;
+                text-align: center;
+            }
+        /*****checkbox(menu.png)를 클릭할 경우 gnb가 토글*****/
+        #gnb {
+            display: none
+        }
+
+        #toggle:checked ~ #gnb {
+            display: block;
+        }
+
+        #toggle {
+            display: none;
+        }
+        /***** #lnb *****/
+        #lnb ul {
+            overflow: hidden;
+        }
+
+            #lnb ul li {
+                float: left;
+                width: 20%;
+                text-align: center;
+                height: 60px;
+                line-height: 60px;
+                background-color: #137163;
+                border: 1px solid white;
+                box-sizing: border-box; /* border를 width안으로 */
+            }
+
+                #lnb ul li:first-child {
+                    border-left: 0;
+                }
+
+                #lnb ul li:last-child {
+                    border-right: 0;
+                }
+        /***** #content *****/
+        #content {
+            padding: 10px;
+            color: #333333;
+        }
+
+            #content .content_header {
+                padding: 10px;
+                border-bottom: 1px solid gray;
+            }
+
+            #content .content_body p:first-child {
+                color: deepskyblue;
+                padding: 10px;
+                /* 말줄임 태그 */
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            #content .content_body p:last-child {
+                background: url('imgEx1/bg_image.png') -500px -200px;
+                padding: 10px;
+                font-weight: bold;
+            }
+        /***** #footer *****/
+        footer .logo {
+            text-align: center;
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+        }
+
+            footer .logo img {
+                width: 150px;
+            }
+
+        footer .info {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        footer .address {
+            text-align: center;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="toggle" />
+    <header>
+        <a href="#" class="left">
+            <img src="imgEx1/category.png" />
+        </a>
+        <h1>Mobile</h1>
+        <label for="toggle" class="right">
+            <img src="imgEx1/menu.png" />
+        </label>
+    </header>
+    <div id="gnb">
+        <ul>
+            <li><a href="#">gnb1</a></li>
+            <li><a href="#">gnb2</a></li>
+            <li><a href="#">gnb3</a></li>
+            <li><a href="#">gnb4</a></li>
+            <li><a href="#">gnb5</a></li>
+            <li><a href="#">gnb6</a></li>
+            <li><a href="#">gnb7</a></li>
+            <li><a href="#">gnb8</a></li>
+        </ul>
+    </div>
+    <div id="lnb">
+        <ul>
+            <li><a href="#">lnb1</a></li>
+            <li><a href="#">lnb2</a></li>
+            <li><a href="#">lnb3</a></li>
+            <li><a href="#">lnb4</a></li>
+            <li><a href="#">lnb5</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <div class="content_header">
+            <h1>홍길동</h1>
+        </div>
+        <div class="content_body">
+            <p>첫번째 p태그는 한줄로 출력하는데 내용이 길면 말줄임(...)</p>
+            <p>
+                없는 할지니, 어디 거친 눈에 구하기 바이며, 끓는 끓는다. 봄날의 그들은 일월과 풀밭에 그들은 이것이다. 그들을 피가 부패를 귀는 품고 방황하여도, 영원히 내는 아니다. 공자는 설레는 노년에게서 가치를 봄바람을 피어나는 인생을 있는 아름다우냐? 품고 방지하는 관현악이며, 열락의 속에서 품었기 우리는 풀밭에 품에 사막이다. 영락과 청춘에서만 모래뿐일 피어나는 이상의 설레는 사람은 것이다. 우리 이상을 되는 커다란 같이 때까지 맺어, 넣는 있는가? 더운지라 지혜는 그와 무엇이 앞이 이성은 긴지라 부패를 위하여서. 때에, 이것이야말로 무한한 전인 기쁘며, 타오르고 우리의 이상은 그들은 것이다.
+                스며들어 거선의 천지는 얼음에 내는 구하기 놀이 듣는다. 그들은 가슴에 없는 듣기만 타오르고 인간의 그림자는 놀이 구하지 것이다. 청춘은 기관과 미인을 봄날의 열락의 그들의 교향악이다. 것은 얼음이 안고, 두손을 같으며, 이상은 것이다. 없으면, 못할 사랑의 설산에서 뛰노는 일월과 아니다. 능히 보이는 피고 없으면 인생을 웅대한 방황하였으며, 돋고, 이것이다. 그들은 가슴이 예수는 광야에서 천지는 아니다. 그들의 있는 위하여서 대고, 소금이라 것이다. 용기가 않는 그림자는 뜨고, 피다. 창공에 용기가 위하여, 봄바람이다.?
+            </p>
+        </div>
+    </div><!-- # content -->
+    <footer>
+        <div class="logo">
+            <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" />
+        </div>
+        <div class="info">
+            XX주식회사
+        </div>
+        <div class="address">
+            서울시 xx구 xx동 00-0 xx빌딩 000호
+        </div>
+    </footer>
+</body>
+</html>
