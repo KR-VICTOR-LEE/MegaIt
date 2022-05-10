@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" name="viewport"
+          content="width=divice-width, initial-scale=1.0, maximum-scale=2.0" />
+    <title></title>
+    <style>
+        /************** 페이지 초기화 **************/
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT';
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        /************** header **************/
+        header {
+            background-color: #ea8f00;
+            height: 100px;
+        }
+            /************** header #logo_wrap **************/
+            header #logo_wra {
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                position: relative;
+            }
+
+                header #logo_wra img.menu {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                header #logo_wra img.myinfo {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+
+                header #logo_wra a.logo {
+                    color: #ffffff;
+                }
+            /************** header #search **************/
+            header #search {
+                height: 50px;
+                position: relative; /* 돋보기 이미지를 #search안에 */
+            }
+
+                header #search input[type='text'] {
+                    width: 100%;
+                    height: 50px;
+                    border: 3px solid #ea8f00;
+                    box-sizing: border-box;
+                    padding: 5px 55px 5px 5px;
+                    font-size: 1.3em;
+                    outline: none;
+                }
+
+                header #search input[type=submit] {
+                    width: 50px;
+                    height: 50px;
+                    background: url('imgEx2/search.png');
+                    border: 0;
+                    outline: 0;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                }
+        /************** #lnb **************/
+        #lnb ul {
+            overflow: hidden;
+            margin: 5px 0; /* 위 아래 여백만 5px */
+        }
+
+            #lnb ul li {
+                float: left;
+                width: 16.666666%;
+                text-align: center;
+                border-right: 2px solid #ea8f00;
+                box-sizing: border-box;
+                font-size: 1.3em;
+            }
+
+                #lnb ul li:last-child {
+                    border: 0;
+                }
+
+                #lnb ul li a {
+                    color: blue;
+                }
+        /************** #section1 **************/
+        #section1 .row1, #section1 .row2, #section3 .row3 {
+            overflow: hidden;
+        }
+
+        .row1 div, .row2 div, .row3 div {
+            float: left;
+            width: 50%;
+            height: 130px;
+            border: 2px solid white;
+            box-sizing: border-box;
+        }
+
+        #section1 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /************** #section2 **************/
+        #section2 {
+            margin: 5px;
+        }
+
+        #section2 ul li {
+            border: 1px solid lightgray;
+            padding: 8px;
+        /******** 말줄임 (ellipsis) 태그 ********/
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        /************** #section3 **************/
+        #section3 ul li{
+            border: 1px solid lightgray;
+            margin:5px;
+            padding: 5px;
+            height : 120px;
+            position:relative;  
+        }
+        #section3 ul li p.img{
+            position:absolute;
+            top:15px;
+            left:15px;
+        }
+        #section3 ul li p.txt{
+            width:100%-120px;
+            padding: 5px 5px 5px 120px;
+        }
+        #section3 ul li p.txt span:first-child {
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size:1.2em;
+            font-weight:bold;
+            color:darkblue;
+        }
+        /************** #footer **************/
+        footer{
+            background-color: #ea8f00;
+            text-align:center;
+        }
+        footer p:last-child{
+            font-size: .8em;
+            padding-bottom: 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo_wra">
+            <img src="imgEx2/menu.png" class="menu" alt="메뉴 아이콘" />
+            <a href="ex2.html" class="logo"><h3>mobile logo</h3></a>
+            <img src="imgEx2/myinfo.png" class="myinfo" alt="내정보 아이콘" />
+        </div>
+        <div id="search">
+            <form action="#">
+                <input type="text" name="query_word" />
+                <input type="submit" value="" />
+            </form>
+        </div>
+    </header>
+    <div id="lnb">
+        <ul>
+            <li><a href="#lnb1">lnb1</a></li>
+            <li><a href="#lnb2">lnb2</a></li>
+            <li><a href="#lnb3">lnb3</a></li>
+            <li><a href="#lnb4">lnb4</a></li>
+            <li><a href="#lnb5">lnb5</a></li>
+            <li><a href="#lnb6">lnb6</a></li>
+        </ul>
+    </div>
+    <section>
+        <div id="section1">
+            <div class="row1">
+                <div>
+                    <a href="https://finance.naver.com/news/news_read.naver?mode=mainnews&office_id=011&article_id=0004051803">
+                        <img src="https://imgnews.pstatic.net/image/011/2022/05/10/0004051803_001_20220510094001111.jpg?type=w540" alt="1행1열 기사" />
+                    </a>
+                </div>
+                <div>
+                    <a href="https://finance.naver.com/news/news_read.naver?mode=mainnews&office_id=011&article_id=0004051718">
+                        <img src="https://imgnews.pstatic.net/image/011/2022/05/10/0004051718_001_20220510071202049.jpeg?type=w540" alt="1행2열 기사" />
+                    </a>
+                </div>
+            </div>
+            <div class="row2">
+                <div>
+                    <a href="https://finance.naver.com/news/news_read.naver?mode=mainnews&office_id=018&article_id=0005211329">
+                        <img src="https://imgnews.pstatic.net/image/018/2022/05/10/0005211329_001_20220510080201737.jpg?type=w540" alt="1행1열 기사" />
+                    </a>
+                </div>
+                <div>
+                    <a href="https://finance.naver.com/news/news_read.naver?mode=mainnews&office_id=001&article_id=0013166466">
+                        <img src="https://imgnews.pstatic.net/image/001/2022/05/10/PRU20220509359401009_P4_20220510013306930.jpg?type=w540" alt="1행2열 기사" />
+                    </a>
+                </div>
+            </div>
+            <div class="row3">
+                <div>
+                    <a href="https://finance.naver.com/news/news_read.naver?mode=mainnews&office_id=011&article_id=0004051803">
+                        <img src="https://imgnews.pstatic.net/image/011/2022/05/10/0004051803_001_20220510094001111.jpg?type=w540" alt="1행1열 기사" />
+                    </a>
+                </div>
+                <div>
+                    <a href="https://finance.naver.com/news/news_read.naver?mode=mainnews&office_id=011&article_id=0004051718">
+                        <img src="https://imgnews.pstatic.net/image/011/2022/05/10/0004051718_001_20220510071202049.jpeg?type=w540" alt="1행2열 기사" />
+                    </a>
+                </div>
+            </div>
+        </div><!-- #section1 3행2열 기사 이미지와 alink -->
+        <div id="section2">
+            <ul>
+                <li>
+                    <a href="https://finance.naver.com/news/news_read.naver?mode=mainnews&office_id=011&article_id=0004051803">[오전시황] 美 증시 급락에 코스피 2600선 붕괴</a>
+                </li>
+                <li>
+                    <a href="https://finance.naver.com/news/news_read.naver?mode=mainnews&office_id=277&article_id=0005086386">[일일펀드동향] 국내 채권형 펀드 2거래일간 3013억원 순유입</a>
+                </li>
+                <li>
+                    <a href="https://finance.naver.com/news/news_read.naver?mode=mainnews&office_id=001&article_id=0013166466">[유럽증시] 중국 봉쇄·금리 인상 우려에 급락</a>
+                </li>
+                <li>
+                    <a href="https://finance.naver.com/news/news_read.naver?mode=mainnews&office_id=018&article_id=0005211329">[외환브리핑]점차 커지는 스태그 공포…환율, 1270원대 사흘째 상승 전망</a>
+                </li>
+            </ul>
+        </div><!-- #section2 : 기사 해드라인 list와 alink -->
+        <div id="section3">
+            <ul>
+                <li>
+                    <p class="img">
+                        <img src="https://via.placeholder.com/100x100" />
+                    </p>
+                    <p class="txt">
+                        <span>첫번째 span부분은 말줄임 할 예정입니다. 길면 말줄임</span>
+                        <span>두번째 span부분은 다 나와. 그래서 2줄이상이 되기도 하죠.</span>
+                    </p>
+                </li>
+                <li>
+                    <p class="img">
+                        <img src="https://via.placeholder.com/100x100" />
+                    </p>
+                    <p class="txt">
+                        <span>첫번째 span부분은 말줄임 할 예정입니다. 길면 말줄임</span>
+                        <span>두번째 span부분은 다 나와. 그래서 2줄이상이 되기도 하죠.</span>
+                    </p>
+                </li>
+            </ul>
+        </div><!-- #section3 : 100x100 이미지와 가변길이 -->
+    </section>
+    <footer>
+        <p><img src="imgEx2/logo.png" alt="회사로고" /></p>
+        <p>서울시 강남구 역삼동 좋은빌딩 402호</p>
+    </footer>
+</body>
+</html>
