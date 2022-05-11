@@ -1,0 +1,135 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-size:1em;
+}
+li{list-style:none;}
+a{text-decoration:none;}
+#wrap{
+    width:1200px;
+    margin : 0 auto;
+}
+header {
+    overflow:hidden;
+}
+header a{
+    font-weight:bold;
+    color : black;
+}
+header #gnb{
+    width:100%;
+    background-color:white;
+   
+}
+header #gnb ul{
+    width:1200px;
+    margin: 0 auto;
+    line-height:80px;
+    text-align:center;
+    font-size:1.2em;
+}
+header #gnb .logo{
+    margin: 20px 20px 30px 200px;
+    width: 100px;
+    height:60px;
+    line-height:60px;
+    float:left;
+    border:1px solid gray;
+    background-color :#FDEADA;
+    text-align:center;
+    font-weight:bold;
+    font-size : 1.2em;
+
+}
+header #gnb ul li:nth-child(1),
+header #gnb ul li:nth-child(2),
+header #gnb ul li:nth-child(3),
+header #gnb ul li:nth-child(4){
+    float:left;
+    margin-left : 50px;
+}
+header #gnb ul li:nth-child(5),
+header #gnb ul li:nth-child(6),
+header #gnb ul li:nth-child(7){
+    float:right;
+    margin-right : 50px;
+}
+#mypage{ 
+    width : 1200px;
+    font-size:20px;
+    margin-bottom : 50px;
+    border-bottom : 1px solid gray;
+    font-weight:bold;
+}
+
+content{
+    width:90%;
+    overflow:hidden;
+    margin : 0 auto;
+}
+content #main_menu ul{
+    width:300px;
+    float:left;
+    margin : 0 auto 3px;
+    padding-right : 30px;
+}
+
+content #main_menu ul li{
+    line-height:35px;
+    padding:5px;
+    border: 1px solid gray;
+    text-align:left;
+ }
+content #main_menu ul li:nth-child(5){
+    background-color:#FDEADA;
+    font-weight:bold;
+}
+
+content #main_menu ul li a{
+     margin-left:15px;
+ }
+content fieldset{
+    
+    width:790px;
+    height:400px;
+    margin-bottom : 50px;
+}
+#form{
+    text-align:left;
+    margin: 30px auto;
+    
+}
+
+#form .p{
+    
+    font-size:20px;
+    margin-bottom : 50px;
+    border-bottom : 1px solid gray;
+}
+content #form th{
+    font-size:1.2em;
+    padding-right : 10px;
+
+}
+content #form td input{
+    width : 300px;
+    height : 40px;
+}
+#form2{
+      margin-left:395px;
+}
+
+
+#form2 td input{
+    width : 50px;
+}
+footer #footer{
+    border : 1px solid gray;
+    text-align:center;
+    background-color :#FDEADA;
+    width : 1200px;
+    height : 40px;
+    line-height : 40px;
+    font-size:1.2em;
+    font-weight:bold;
+}

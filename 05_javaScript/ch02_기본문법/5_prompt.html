@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        scoreStr = prompt('점수를 입력하세요', '0~100점 사이');
+        if (scoreStr == null) {
+            alert('점수를 입력하세요');
+        } else {
+            // document.write(scoreStr + '의 타입은 ' + typeof (scoreStr));
+            score = Number(scoreStr); // Number("")결과는 0 cf. 자바에서는 Integer.parselnt("") 오류
+            //  document.write(score + "의 타입은" + typeof(score);
+            if (isNaN(score)) { //score가 NaN이면 true를 return
+                alert('점수를 입력하세요');
+            } else {
+                result = score > 70 ? "잘했다" : "못했다";
+            }
+            document.write(result);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
