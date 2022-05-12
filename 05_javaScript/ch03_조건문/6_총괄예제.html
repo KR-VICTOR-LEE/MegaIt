@@ -1,0 +1,70 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        p {
+            text-align: center;
+        }
+
+        input[type='submit'] {
+            padding: 0 20px;
+            font-weight: bold;
+        }
+
+        input[type='number'] {
+            text-align: center;
+        }
+    </style>
+    <script>
+    function chk() {
+            var num1Str = frm.num1.value;
+            var num2Str = frm.num2.value;
+            var num1 = Number(num1Str);
+            var num2 = Number(num2Str);
+            if (!num1Str || isNaN(num1)) {
+                alert('첫번째 수를 입력하세요');
+                frm.num1.focus();
+                return false;
+            } else if (!num2Str || isNaN(num2)) {
+                alert("두번째수를 입력하세요");
+                frm.num2.focus();
+                return false;
+            }
+
+            var diff = (num1 > num2) ? (num1 - num2) : (num2 - num1); // 큰수 - 작은수
+            if (num1 == num2) {
+                var msg = "<h3>두 수가 같습니다</h3>";
+            } else if (num1 > num2) {
+                var msg = "<h3>첫번째 수가 " + diff + "만큽 큽니다</h3>";
+            } else {
+                var msg = "<h3>두번째 수가 " + diff + "만큽 큽니다</h3>";
+            }
+            alertMsg = msg.substr(4);
+            alertMsg = alertMsg.substr(0, alertMsg.indexOf('</h3>'));
+            document.body.innerHTML += msg;
+            alert(alertMsg);
+            frm.num1.value = num1;
+            frm.num2.value = num2;
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form name="frm" onsubmit="return chk()">
+        <fieldset>
+            <p>
+                <label for="num1">첫번째 수 : </label>
+                <input type="text" name="num1" id="num1" />
+            </p>
+            <p>
+                <label for="num2">두번째 수 : </label>
+                <input type="text" name="num2" id="num2" />
+            </p>
+            <p><input type="submit" value="결과" /></p>
+        </fieldset>
+    </form>
+</body>
+</html>

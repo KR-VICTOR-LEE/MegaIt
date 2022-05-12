@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table {
+            width: 100px;
+            margin: 0 auto;
+            border: 1px solid red;
+            overflow:hidden;
+        }
+
+        caption {
+            text-decoration: underline;
+            padding-bottom: 10px;
+        }
+        tr{
+            float:left;
+        }
+        table td:hover {
+            background-color: lightyellow;
+        }
+    </style>
+    <script>
+        document.write('<table>');
+        for (var i = 2; i <= 9; i++) {
+            document.write('<th>'+i+'</th>');
+        }
+        document.write('<caption>'+'구구단'+'</catption>');
+       
+        for (var i = 1; i <= 9; i++) {document.write('<tr>');
+            for (var j = 2; j <= 9; j++) {
+                document.write('<td>' + i + '*' + j + '=' + (i * j) + '</td>');
+            }
+            document.write('</tr>');
+        }
+        document('</table>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>
