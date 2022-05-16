@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>  
+    for (var i = 0; i < 3; i++) {
+      var fun = function (j) {
+        setTimeout(function () { alert(j); }, 0);
+      };
+      fun(i);
+      // fun(0) - alert(0)을 0초 후 타이머
+      // fun(1) - alert(1)을 0초 후 타이머
+      // fun(2) - alert(2)을 0초 후 타이머
+    }
+    /*
+    [0, 1, 2].forEach(function (data, idx) {// 경고창 순서 :0-1-2
+      setTimeout(function () {
+        alert(data);
+        // data=0일 때, alert(data) - 0초 후 타이머
+        // data=1일 때, alert(data) - 0초 후 타이머
+        // data=2일 때, alert(data) - 0초 후 타이머
+      }, 0);
+    });
+    */
+    /*
+    for (var i = 0; i < 3; i++) {
+      setTimeout(function () { alert(i); }, 0);
+      // i가 0일 때, alert(i) - 0초 후 타이머
+      // i가 1일 때, alert(i) - 0초 후 타이머
+      // i가 2일 때, alert(i) - 0초 후 타이머
+    }
+    */
+  </script>
+</head>
+<body>
+</body>
+</html>
