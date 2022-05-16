@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Student(name, kor, mat, eng, sci) {
+            this.name = name;
+            this.kor = kor;
+            this.mat = mat;
+            this.eng = ent;
+            this.sci = sci;
+            this.getSum = function () {
+                return this.kor + this.mat + this.eng + this.sci
+            };
+            this.getAvg = function () {
+                return this.getSum() / 4;
+            };
+                
+            this.toString = function () {
+                    var output = '';
+                    for (var key in this) {
+                        if (key != 'getSum' && key != 'getAvg' && key != 'toString') {
+                            output += key + ':' + this[key] + '<br>';
+                        } else if (key == 'getSum' || key == 'getAvg') {
+                            output += key.substring(3).toUpperCase() + ':' + this[key]() + '<br>';
+                        } // if
+                    }//for
+                    return output;
+                };
+            }
+            var students = [new Student('홍길동', 100, 100, 100, 100),
+                new Student('신길동', 100, 90, 80, 70),
+                new Student('김길동', 100, 70, 88, 60),
+                new Student('지울애', 10, 20, 30, 40)];
+            students.forEach(function (data, idx) {
+                document.write(idx + '번째<br>' + data + '<hr' >);
+            });
+            students.pop();
+            document.write('제거 후 <br>');
+            students.forEach(function (data, idx) {
+                document.write(idx + '번째<br>' + data + '<hr' >);
+            });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

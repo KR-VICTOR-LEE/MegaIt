@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var students = [{ name: '홍길동', kor: 99, mat: 90, eng: 98, sci: 100 },
+                       { name: '김길동', kor: 100, mat: 90, eng: 98, sci: 100 }];
+        students.push({ name: '김길동', kor: 100, mat: 90, eng: 98, sci: 100 });
+        students.push({ name: '신길동', kor: 80, mat: 91, eng: 98, sci: 88 });
+        students.push({ name: '마길동', kor: 90, mat: 92, eng: 98, sci: 100 });
+        for (var idx in students) {
+            students[idx].getSum = function () {
+                return this.kor + this.mat + this.eng + this.sci;
+            };
+            students[idx].getAvg = function () {
+                return this.getSum() / 4;
+            };
+            students[idx].toString = function(){
+                var output = '';
+                for (var key in this) {
+                    if (key != 'getSum' && key != 'getAvg' && key != 'toString') {
+                        output += key + ':' + this[key] + '<br>';
+                    } else if (key == 'getSum' || key == 'getAvg') {
+                        output += key.substring(3).toUpperCase() + ':' + this[key]() + '<br>';
+                    } //if
+                }//for
+                return output;
+            };
+        }//for
+        // 1. student 배열 출력 : 일반for문
+        var output = '';
+        for (var idx = 0; idx < students.length; idx++) {
+            output += idx + '번째' + '<br>';
+            output += students[idx].toString();
+        }
+        document.write(output);
+       // alert(output.replaceAll('<br>', '\n'));
+        // 2. student 배열 출력 : for-in문
+        document.write('<h4>for-in문 이용</h4>');
+        for (var idx in students) {
+            output += idx + '번째' + '<br>';
+            output += students[idx].toString();
+        }
+        // 3. student 배열 출력 : forEach() 함수 이용
+        document.write('<h4>forEach()함수 이용</h4>');
+        students.forEach(function (data, idx) {
+            document.write(idx + '번째<br>');
+            document.write(data);
+        });
+
+            function replaceAll(str, oldStr, newStr) {
+        /* str = "aaaa<br>bbbb<br>cccc";
+        splitStr = ['aaaa', 'bbbb', 'cccc'];
+        joinStr = 'aaaa\nbbbb\ncccc'; */
+                var splitStr = str.split(oldStr);
+                var joinStr = splitStr.join(newStr);
+                return joinStr;
+                //return str.split(oldStr).join(newStr);
+            }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
