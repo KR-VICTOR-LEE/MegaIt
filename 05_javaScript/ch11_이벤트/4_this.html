@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            var header = document.getElementsByClassName('header'); // 배열
+
+            for (var idx in header) {
+                header[idx].onclick = function () {
+                    msg = this.innerHTML;
+                    alert(msg);
+                    this.style.color = 'red';
+                    this.style.border = '1px solid orange';
+                    // this.style cssText = 'color:red; border:1px solid orange;';
+                };
+            }
+           /* header[0].onclick = function () {
+                msg = header[0].innerHTML;
+                alert(msg);
+                alert('click1');
+                header[0].style.color = 'red';
+                header[0].style.border = '1px solid orange';
+            };
+
+
+            header[1].onclick = function () {
+                msg = header[1].innerHTML;
+                alert(msg);
+                alert('click2');
+                header[1].style.color = 'red';
+                header[1].style.border = '1px solid orange';
+            };
+            header[2].onclick = function () {
+                msg = header[2].innerHTML;
+                alert(msg);
+                alert('click3');
+                header[2].style.color = 'red';
+                header[2].style.border = '1px solid orange';
+            }; */
+        };
+    </script>
+</head>
+<body>
+    <h1 class="header">click1</h1>
+    <h1 class="header">click2</h1>
+    <h1 class="header">click3</h1>
+    <h1>Click4</h1>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+   <script>
+       window.onload = function () {
+           var id = opener.document.getElementById('id').value; // id입력값 받아옴
+           var ckd = document.getElementById('ckd'); // id 
+           ckd.value = id;
+       };
+        function send() {
+            opener.document.getElementById('id').value = ckd.value; // 아이디사용 click, ckd id 사용 후 종료
+            close();
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return chk()">
+        <table>
+            <tr>
+                <td>아이디</td>
+                <td><input type="text" name="ckd" id="ckd" /></td>
+                <td><input type="button" value="제출" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="아이디사용" onclick="send"/></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

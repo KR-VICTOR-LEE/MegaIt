@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var overImg = ['img/0over.jpg', 'img/1over.jpg', 'img/2over.jpg', 'img/3over.jpg',];
+    var outImg = ['img/0out.jpg', 'img/1out.jpg', 'img/2out.jpg', 'img/3out.jpg',];
+    function over(num) {
+      var imgs = document.getElementsByTagName('img');
+      //imgs[num].src = overImg[num];
+      imgs[num].setAttribute('src', overImg[num])
+    }
+    function out(num) {
+      var imgs = document.getElementsByTagName('img');
+      //imgs[num].src = outImg[num];
+      imgs[num].setAttribute('src', 'img/' + num + 'out.jpg');
+    }
+  </script>
+</head>
+<body>
+  <img src="img/0out.jpg" onmouseover="over(0)" onmouseout="out(0)" />
+  <img src="img/1out.jpg" onmouseover="over(1)" onmouseout="out(1)" />
+  <img src="img/2out.jpg" onmouseover="over(2)" onmouseout="out(2)" />
+  <img src="img/3out.jpg" onmouseover="over(3)" onmouseout="out(3)" />
+</body>
+</html>

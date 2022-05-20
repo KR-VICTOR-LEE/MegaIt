@@ -1,0 +1,37 @@
+1. Oracle install -> cmd창 띄워 다음을 실행
+
+2. c:\> sqlplus system/oracle(비번) -- 시스템권한으로 oracleDB에 접근
+   c:\> sqlplus "/as sysdba
+
+3. user ID 생성
+SQL>create user scott identified by tiger; 
+User created.
+
+4. scott에 dba권한 부여
+SQL>grant dba to scott;
+Grant succeeded.
+
+5. SQL>exit; -- 시스템권한에서 빠져나오기
+
+6. scott계정으로 Oracle DB 접속
+c:\>sqlplus scott/tiger
+SQL>SELECT * FROM TAB; -- 현계정의 테이블들
+
+7. 기본 데이터를 넣기 위해 demo.sql 통째로 실행(기본데이터 넣는 명령들 모음)
+SQL>@c:/demo.sql;
+c:\>
+
+8. scott계정에 demo.sql이 성공적으로 수행되었는지 확인
+c:\>sqlplus scott/tiger
+SQL> SELECT * FROM TAB;
+
+9. sqlDeveloper
+
+
+
+
+
+
+
+
+

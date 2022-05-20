@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title>테이블에 입력한 숫자 반응하기</title>
+  <style>
+    table {width: 500px; margin: 50px auto; background-color: darkgreen; }
+    td {   background-color: white;   padding: 50px;   text-align: center;}
+  </style>
+  <script>
+    // 윗 숫자 키보드를 입력시 red바탕(event.keyCode : 48~56) 
+    // 오른쪽 숫자 키보드를 입력시 yellow바탕(event.keyCode : 96~104)
+    window.onkeyup = function () {
+      var tds = document.getElementsByTagName('td');
+      if (event.keyCode >= 48 && event.keyCode <= 56) {
+        for (var i = 0; i < tds.length; i++) {
+          tds[i].style.backgroundColor = 'white';
+        }
+        tds[event.keyCode - 48].style.backgroundColor = 'red';
+      }
+      if (event.keyCode >= 96 && event.keyCode <= 104) {
+        for (var i = 0; i < tds.length; i++) {
+          tds[i].style.backgroundColor = 'white';
+        }
+        tds[event.keyCode - 96].style.backgroundColor = 'yellow';
+      }
+    };
+  </script>
+</head>
+<body>
+  <table>
+    <tr><td>0</td><td>1</td><td>2</td></tr>
+    <tr><td>3</td><td>4</td><td>5</td></tr>
+    <tr><td>6</td><td>7</td><td>8</td></tr>
+  </table>
+</body>
+</html>

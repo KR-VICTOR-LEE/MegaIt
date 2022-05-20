@@ -1,0 +1,20 @@
+1. *.csv
+       name,age
+       '홍길동',25
+       '김길동',35
+2. *.json (www.data.go.kr)
+	{name:'홍길동','age':25},	{name:'김길동','age':35}
+
+3. *.xml
+       <person>
+	<name>홍길동</name>
+	<age>25</age>
+       </person>
+       <person>
+	<name>김길동</name>
+	<age>35</age>
+       </person>
+
+4. *.txt ; 텍스트 파일
+
+5. *.xlsx ; 엑셀파일

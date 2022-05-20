@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Student(name, kor, mat) {
+            this.name = name;
+            this.kor = kor;
+            this.mat = mat;
+        }
+        Student.prototype.getSum = function () {
+            return this.kor + this.mat;
+        };
+        Student.prototype.getAvg = function () {
+            return this.getSum() / 2;
+        };
+        Student.prototype.toString = function () {
+            return this.name + '(' + this.kor + ',' + this.mat + ',총점 : ' +
+                this.getSum() + ',평균' + this.getAvg() + ')';
+        };
+        var students = [new Student('홍길동', 99, 98), new Student('김길동', 50, 60),
+            new Student('마길동', 20, 10), new Student('윤길동', 70, 60),
+            new Student('천길동', 99, 99),];
+        document.write('<h3>정렬 전 원 데이터</h3>');
+        students.forEach(function (value, idx) {
+            document.write(idx + ':' + value + '<br>');
+        });
+        originStudents = students; // 정렬전 데이터를 저장하고 싶으면 다른 변수 할당
+        // 총점 기준으로 오름차순 정렬
+        students.sort(function (left, right) {
+            return left.getSum() - right.getSum();
+        });
+        document.write('<h3>총점 기준으로 오름차순 정렬한 데이터</h3>');
+        students.forEach(function (value, idx) {
+            document.write(idx + ':' + value + '<br>');
+        });
+        // 이름 기준으로 오름차순
+        students.sort(function (left, right) {
+            // return left.kor - right.kor; // return 음수면 left가 앞. return 양수면 right를 앞
+            if (left.name <= right.name) {
+                return -1; //return 음수면 left가 앞에
+            } else if (left.name > right.name) {
+                return 1; // return 양수면 right가 앞에 
+            } else {
+                return 0; // return 0이면 위치 그대로
+                   }
+        });
+        // 이름 가나다순으로 정렬
+        students.sort();
+        document.write('<h3>이름 기준으로 오름차순 정렬한 데이터</h3>')
+        students.forEach(function (value, idx) {
+            document.write(idx + ':' + value + '<br>');
+        });
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>
