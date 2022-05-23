@@ -4,21 +4,29 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
+	<title>로그인화면</title>
 	<style>
-		
+		form {width:300px; margin: 10px auto;}
+		td{text-align: center; padding:5px;}
 	</style>
 </head>
 <body>
 	<form action="ex7_loginPro.jsp" method="post">
-	<h1>로그인 화면</h1>
-	<hr>
-	<table>
-		<tr><td>이   름</td><th><input type="text" name="name"></th></tr>
-		<tr><td>아이디</td><th><input type="text" name="id"></th></tr>
-		<tr><td>패스워드</td><th><input type="password" name="pw" ></th></tr>
-		<tr><td colspan="2"><input type="submit" value="로그인"></td></tr>
+		<table>
+			<tr><th>이름</th><td><input type="text" name="name"></td></tr>
+			<tr><th>아이디</th><td><input type="text" name="id"></td></tr>
+			<tr><th>패스워트</th><td><input type="password" name="pw"></td></tr>
+			<tr><td colspan="2"><input type="submit" value="로그인"></td></tr> 
 		</table>
 	</form>
 </body>
 </html>
+
+
+
+
+
+
+
+
+

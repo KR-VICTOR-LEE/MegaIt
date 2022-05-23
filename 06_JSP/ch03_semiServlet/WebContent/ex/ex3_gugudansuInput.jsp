@@ -5,10 +5,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
+	<!-- <link href="../css/ex3.css" rel="stylesheet"> -->
+	<!-- <link href="http://localhost:8090/ch03_semiServlet/css/ex3.css" rel="stylesheet"> -->
 	<link href="/ch03_semiServlet/css/ex3.css" rel="stylesheet">
 </head>
-<!-- ex3.jsp  -> 파라미터를 가지고 Ex3서블릿에 요청-->
+<!-- ex/ex3.jsp -> 파라미터를 가지고 Ex3서블릿에 요청 -->
 <body>
+	<!-- <form action="../Ex3"> -->
 	<form action="/ch03_semiServlet/Ex3" method="get">
 		<select name="su">
 			<option value="2">2단</option>
@@ -24,3 +27,15 @@
 	</form>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

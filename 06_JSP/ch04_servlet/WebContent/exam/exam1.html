@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		window.onload = function(){
+			document.querySelector('form').onsubmit = function(){
+				var opt = document.querySelectorAll('option'); // 배열
+				var cnt = 0;
+				for(var i=0 ; i<opt.length ; i++){
+					cnt = cnt + opt[i].selected;
+				}//for
+				if(!cnt){
+					alert('구구단 한개이상은 선택하셔야 합니다');
+					return false;
+				}//if
+			};//onsubmit
+		};//onload
+	</script>
+</head>
+<body>
+	<h2>2~9단까지 원하는 구구단 입력</h2>
+	<form action="../Exam1" method="get">
+		<select name="su" multiple="multiple" size="5">
+			<option value="2">2단</option>
+			<option value="3">3단</option>
+			<option value="4">4단</option>
+			<option value="5">5단</option>
+			<option value="6">6단</option>
+			<option value="7">7단</option>
+			<option value="8">8단</option>
+			<option value="9">9단</option>
+		</select>
+		<input type="submit" value="구구단 출력">
+		<input type="button" value="경고" onclick="alert('type=button으로');">
+	</form>
+</body>
+</html>

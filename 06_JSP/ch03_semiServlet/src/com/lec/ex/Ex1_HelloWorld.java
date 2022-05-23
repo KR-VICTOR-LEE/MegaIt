@@ -1,5 +1,4 @@
 package com.lec.ex;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -8,33 +7,38 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-/**
- * Servlet implementation class Ex1_HelloWorld
- */
-// @WebServlet(name = "HelloWorld", urlPatterns = { "/HW" })
+@WebServlet("/hw")
 public class Ex1_HelloWorld extends HttpServlet {
-
 	private static final long serialVersionUID = 1L;
- 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doGetÈ£Ãâ");
+		System.out.println("doGetí˜¸ì¶œ");
 		response.setContentType("text/html; charset=utf-8");
-		PrintWriter out = response.getWriter();
+		PrintWriter out = response.getWriter(); // ìŠ¤íŠ¸ë¦¼ ê°ì²´ ìƒì„±
 		out.println("<html>");
 		out.println("<head>");
 		out.println("<style>");
-		out.println("h1{color:blue;");
+		out.println("h1 {color:blue;}");
 		out.println("</style>");
 		out.println("</head>");
 		out.println("<body>");
-		out.println("<h1>¾È³çÇÏ¼¼¿ä. Ã¹ servlet ¿¹Á¦ÀÔ´Ï´Ù.</h1>");
+		out.println("<h1>ì•ˆë…•í•˜ì„¸ìš”. ì²« servlet ì˜ˆì œì…ë‹ˆë‹¤</h1>");
 		out.println("</body>");
 		out.println("</html>");
 		out.close();
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doPostÈ£Ãâ");
+		System.out.println("doPostí˜¸ì¶œ");
 		doGet(request, response);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+

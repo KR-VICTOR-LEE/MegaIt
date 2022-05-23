@@ -10,16 +10,33 @@
 	<title>Insert title here</title>
 </head>
 <body>
-<!-- dd -->
+<!-- HTML 주석 -->
+	<%-- JSP주석 --%>
 	<%
-	//dd
+	// 주석
+	/* 여러 
+	  줄 주석
+	*/
 	Date now = new Date();
-	String str = String.format("%1$tY년 %1$Tm월 %1$Td일 %1$TH시 %1$TM분", now);
-	Calendar now2 = Calendar.getInstance(); 
-	SimpleDateFormat sdf = new SimpleDateFormat("yy년 MM월 dd일은 좋은 날 입니다.");
+	String str = String.format("%1$TY년 %1$Tm월 %1$Td일 %1$TH시 %1$TM분", now);
+	Calendar now2 = Calendar.getInstance();
+	SimpleDateFormat sdf = new SimpleDateFormat("yy년 MM월 dd일은 좋은 날입니다");
 	String str2 = sdf.format(now2.getTime());
 	%>
 	<%=str %><br>
 	<%=str2 %>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+

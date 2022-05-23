@@ -8,15 +8,25 @@
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
-  
- </welcome-file-list>
- <!-- com.lec.ex.Ex1_HelloWorld클래스의 url매핑(어노테이션방법, web.xml) -->
- <servlet>
- 	<servlet-name>HelloWorld</servlet-name>
- 	<servlet-class>com.lec.ex.Ex1_HelloWorld</servlet-class>
- </servlet>
- <servlet-mapping>
- 	<servlet-name>HelloWorld</servlet-name>
- 	<url-pattern>/hw</url-pattern>
- </servlet-mapping>
+  </welcome-file-list>
+  <!-- com.lec.ex.Ex1_HelloWorld클래스의 url매핑(어노테이션, web.xml) -->
+   <!-- 
+  <servlet>
+  	<servlet-name>HelloWorld</servlet-name>
+  	<servlet-class>com.lec.ex.Ex1_HelloWorld</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>HelloWorld</servlet-name>
+  	<url-pattern>/hw</url-pattern>
+  </servlet-mapping>
+   -->
 </web-app>
+
+
+
+
+
+
+
+
+

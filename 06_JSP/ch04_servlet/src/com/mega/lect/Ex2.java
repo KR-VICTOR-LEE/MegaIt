@@ -9,45 +9,48 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-/**
- * Servlet implementation class Ex2
- */
 @WebServlet("/Ex2")
 public class Ex2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// menu, rest ÆÄ¶ó¹ÌÅÍ : request.getParameterValues("ÆÄ¶ó¹ÌÅÍÀÌ¸§") => ¹è¿­·Î ¹ŞÀ½
-							// °°ÀºÀÌ¸§ÀÇ ÆÄ¶ó¹ÌÅÍ¸¦ ¿©·¯°³ Àü´Ş¹ŞÀ» °æ¿ì
-		// nation ÆÄ¶ó¹ÌÅÍ : request.getParameter("ÆÄ¶ó¹ÌÅÍÀÌ¸§") => StringÀ¸·Î ¹ŞÀ½
+		// menu, rest íŒŒë¼ë¯¸í„°  : request.getParameterValues("íŒŒë¼ë¯¸í„°ì´ë¦„") => ë°°ì—´ë¡œ ë°›ìŒ
+							// ê°™ì€ì´ë¦„ì˜ íŒŒë¼ë¯¸í„°ë¥¼ ì—¬ëŸ¬ê°œ ì „ë‹¬ë°›ì„ ê²½ìš°
+		// nation íŒŒë¼ë¯¸í„° : request.getParameter("íŒŒë¼ë¯¸í„°ì´ë¦„") => Stringìœ¼ë¡œ ë°›ìŒ
 		String[] menu = request.getParameterValues("menu");
 		String[] rest = request.getParameterValues("rest");
 		String nation = request.getParameter("nation");
 		response.setContentType("text/html; charset=utf-8");
 		PrintWriter out = response.getWriter();
 		if(menu!=null) {
-			out.println("<h4>¼±ÅÃÇÑ ¸Ş´º´Â ");
+			out.println("<h4>ì„ íƒí•œ ë©”ë‰´ëŠ” ");
 			for(String m : menu) {
 				out.println(m + ". ");
 			}
 			out.println("</h4>");
 		}else {
-			out.println("<h4>¼±ÅÃÇÑ ¸Ş´º°¡ ¾ø½À´Ï´Ù</h4>");
+			out.println("<h4>ì„ íƒí•œ ë©”ë‰´ê°€ ì—†ìŠµë‹ˆë‹¤</h4>");
 		}
 		if(rest!=null) {
-			out.println("<h4>¼±ÅÃ ½Ä´ç Áö¿ªÀº "+Arrays.toString(rest)+"ÀÔ´Ï´Ù</h4>");
+			out.println("<h4>ì„ íƒ ì‹ë‹¹ ì§€ì—­ì€ "+ Arrays.toString(rest) + "ì…ë‹ˆë‹¤</h4>");
 		}else {
-			out.println("<h4>¼±ÅÃÇÑ ½Ä´ç Áö¿ªÀÌ ¾ø½À´Ï´Ù</h4>");
+			out.println("<h4>ì„ íƒí•œ ì‹ë‹¹ ì§€ì—­ì´ ì—†ìŠµë‹ˆë‹¤</h4>");
 		}
-		out.println("<h4>¼±ÅÃÇÑ ±¹ÀûÀº "+nation+"ÀÔ´Ï´Ù</h4>");
-		out.close();
+		out.println("<h4>ì„ íƒí•œ êµ­ì ì€ "+nation +"ì…ë‹ˆë‹¤</h4>");
+		out.close();		
 	}
-
-	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		doGet(request, response);
 	}
-
 }
+
+
+
+
+
+
+
+
+
+
+
