@@ -1,0 +1,15 @@
+@charset "UTF-8";
+form{border: 1px solid blue;
+			width: 250px;
+			height: 300px;
+			text-align: center;
+		}
+		button {
+		border: 1px solid blue;
+		background-color : lightblue;
+		width: 50px;
+		height: 50px;
+	}
+	h2{
+		font-style: red;
+	}
